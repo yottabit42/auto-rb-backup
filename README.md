@@ -16,7 +16,7 @@
 1. Edit the variables in the script as-needed.
    * var `ip` must contain a space-delimited list of all reachable IP addresses of RouterOS devices for backup.
    * var `user` must contain the username to use on the remote RouterOS devices. Ensure this user has permission to run the `/export` command.
-   * optional var `save_path` may contain a path prefix to use when saving the backup scripts. A trailing slash is unnecessary, but allowed.
+   * var `save_path` must contain a path prefix to use when saving the backup scripts. A trailing slash is unnecessary, but allowed. Use `.` for the current directory.
    * var `ssh_opts` disables strict host certificate checking, and warnings for changed host certificates. You can remove this var if you desire stricter security, but you will need to login to the host interactively first (in order to save the host certificate), or add the host keys to the `~/.ssh/authorized_hosts` file manually.
 1. If desired, change the timestamp format from unix seconds `+%s` to something else. Unix seconds allows for easy filename sorting, and the ctime of the file inode can still provide a more user-friendly date.
 1. Create an RSA SSH keypair using `ssh-keygen -t rsa`. You should not specify a password (leave blank) in order to allow the SSH login to happen non-interactively.
