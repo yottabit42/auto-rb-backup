@@ -19,7 +19,7 @@ ip='172.16.42.1 172.16.42.2 172.16.42.3 172.16.42.4 172.16.42.5 172.16.44.1'
 # SSH user of the remote host.
 user='yottabit'
 
-# Path to store the saved config scripts.
+# Path to store the saved config scripts. Use '.' for present directory.
 save_path='/mnt/vol1/jacob.mcdonald/jacob.mcdonald/Backups/Routerboards'
 
 # Avoids the accept certificate prompt, and never uses the saved certificates.
