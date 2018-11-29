@@ -29,6 +29,10 @@ save_path='/mnt/vol1/jacob.mcdonald/jacob.mcdonald/Backups/Routerboards'
 # host SSH key changes.
 ssh_opts='-oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null'
 
+# The umask is not set from cron, so let's be explicit for security since
+# RouterOS scripts can contain passwords.
+umask 0027
+
 for ip in ${ip}; do
   ssh ${ssh_opts} ${user}@${ip} /export > "${save_path}/${ip}_$(date +%s).rsc"
 done
