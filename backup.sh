@@ -24,10 +24,10 @@ user='yottabit'
 # Path to store the saved config scripts. Use '.' for present directory.
 save_path='/mnt/vol1/jacob.mcdonald/jacob.mcdonald/Backups/Routerboards'
 
-# Avoids the accept certificate prompt, and never uses the saved certificates.
-# The latter part avoids the security warning that would be presented with the
-# host SSH key changes.
-ssh_opts='-oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null'
+# Avoids the accept certificate prompt, never uses saved certificates,
+# only logs errors. This avoids the security warning that would be presented with
+# host SSH key changes, and unnecessary output such as adding host keys.
+ssh_opts='-oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -oLogLevel=ERROR'
 
 # The umask is not set from cron, so let's be explicit for security since
 # RouterOS scripts can contain passwords.
