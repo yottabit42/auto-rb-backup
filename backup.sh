@@ -2,7 +2,7 @@
 # Backup multiple RouterOS devices to local script files.
 #
 # Author: Jacob McDonald.
-# Revision: 181129b.
+# Revision: 181204a.
 #
 # See https://github.com/yottabit42/auto-rb-backup for full details.
 #
